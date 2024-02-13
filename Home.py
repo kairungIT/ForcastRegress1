@@ -12,15 +12,8 @@ def load_lottieurl(url: str):
         return None
     return r.json()
 
-lottie_url_hello = "https://lottie.host/8a50ffe1-21f4-466b-828a-4d8380f19ae7/I8vj68E5IJ.json"
-lottie_url_download = "https://lottie.host/290016a6-d650-4a32-85c7-4d77b0a892ca/4rNL8XZeZt.json"
+lottie_url_hello = "https://lottie.host/7beb1022-e2a7-4d35-be1e-a4f8372bd478/fPwMwU2mVy.json"
 lottie_hello = load_lottieurl(lottie_url_hello)
-lottie_download = load_lottieurl(lottie_url_download)
-
 
 st_lottie(lottie_hello, key="hello")
-
-if st.button("Download"):
-    with st_lottie_spinner(lottie_download, key="download"):
-        time.sleep(5)
-    st.balloons()
+st.balloons()
